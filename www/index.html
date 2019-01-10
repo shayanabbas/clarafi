@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+	<title>Clara Applicants</title>
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" />
+
+	<script type="text/javascript" src="./assets/js/jquery-validation-1.19.0/lib/jquery-1.11.1.js"></script>
+	<script type="text/javascript" src="./assets/js/jquery-validation-1.19.0/dist/jquery.validate.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.2.2/jquery.form.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-8 offset-sm-2">
+				<div class="border-bottom mb-4 mt-4 pb-2">
+					<div class="alert alert-info" role="alert">
+						<h4>Clara Applicants</h4>
+						<h6>Create applicant for a volunteering service.</h6>
+					</div>
+					<div id="response" class="alert " role="alert">
+                    </div>
+				</div>
+
+				<div class="card">
+					<div class="card-header">
+						<h6 class="card-text">Create Applicant</h3>
+					</div>
+					<div class="card-body">
+						<form id="signupForm" method="post" class="form-horizontal" action="">
+							<div class="form-group row">
+								<label class="col-sm-4 col-form-label" for="firstname">First name</label>
+								<div class="col-sm-6">
+									<input type="text" class="form-control alphaonly" id="first_name" name="first_name" placeholder="First name" />
+								</div>
+							</div>
+
+							<div class="form-group row">
+								<label class="col-sm-4 col-form-label" for="lastname">Last name</label>
+								<div class="col-sm-6">
+									<input type="text" class="form-control alphaonly" id="last_name" name="last_name" placeholder="Last name" />
+								</div>
+							</div>
+							
+							<div class="form-group row">
+								<label class="col-sm-4 col-form-label" for="email">Email</label>
+								<div class="col-sm-6">
+									<input type="email" class="form-control" id="email" name="email" placeholder="Email address" />
+								</div>
+							</div>
+
+							<div class="form-group row">
+								<label class="col-sm-4 col-form-label" for="phone">Phone</label>
+								<div class="col-sm-6">
+									<input type="tel" class="form-control" id="phone" name="phone" placeholder="Mobile or home phone number" />
+								</div>
+							</div>
+							
+							<div class="form-group row">
+								<div class="col-sm-9 offset-sm-4">
+									<button type="submit" class="btn btn-primary" name="signup" value="Sign up">Sign up</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="./assets/js/custom.js"></script>
+</body>
+</html>
