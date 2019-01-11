@@ -91,8 +91,13 @@ $( document ).ready( function () {
             },
             error: function( jqXhr, textStatus, errorThrown ){
                 console.log( jqXhr.status + " " + errorThrown  );
-                $('#response').addClass( "alert-danger" );
-                $('#response').html( "Something went wrong please report to us." );
+                if( jqXhr.status == "422") {
+                    $('#response').addClass( "alert-danger" );
+                    $('#response').html( "Please fill all required fields." );
+                } else {
+                    $('#response').addClass( "alert-danger" );
+                    $('#response').html( "Something went wrong please report to us." );
+                }
             }
         });
 

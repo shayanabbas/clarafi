@@ -14,7 +14,7 @@ if (!count($_POST)) {
     http_response_code(400);
     die(json_encode([
         'type'    => 'alert-danger',
-        'message' => 'Something went wrong.'
+        'message' => 'Something went wrong please report us.'
     ]));
 }
 

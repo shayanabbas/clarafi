@@ -3,7 +3,7 @@ MAINTAINER Shayan Abbas <ministryofcoders@gmail.com>
 
 # Install apache, PHP, and supplimentary programs. openssh-server, curl, and lynx-cur are for debugging the container.
 RUN apt-get update && apt-get -y upgrade && DEBIAN_FRONTEND=noninteractive apt-get -y install \
-    apache2 php7.2 mysql-server libapache2-mod-php curl 
+    apache2 php7.2 mysql-server libapache2-mod-php curl php-curl
 
 # Enable apache mods.
 RUN a2enmod php7.2
@@ -25,6 +25,7 @@ EXPOSE 80
 
 # Copy this repo into place.
 ADD www /var/www/site
+RUN chmod -R 644 /var/www/site/apps/register.php
 
 # Update the default apache site with the config we created.
 ADD apache-config.conf /etc/apache2/sites-enabled/000-default.conf
